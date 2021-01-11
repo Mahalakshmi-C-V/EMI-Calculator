@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+	<head>
+		<title>EMI Calculator</title>
+		<link rel="stylesheet" type="text/css" href="emi_calculator.css">
+		<script src="emi_calculator.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<div><h1>Welcome to the EMI Calculator </h1></div>
+		<hr>
+		<div>
+			<div style="display:inline-block">
+				<div class="form">
+					<form>
+						<table>
+							<tr>
+								<td><label for="amt">Principal Amount:</label></td>
+								<td><input type="number" name="" id="amt" min="0" placeholder="In Rupees"/></td>
+							</tr>
+							<tr>
+								<td><label for="roi">Rate of Interest:</label></td>
+								<td><input type="number" name="" id="roi" min="0" placeholder="Per Annum"/> p.a.</td>
+							</tr>
+							<tr>
+								<td><label for="tenure">Tenure:</label></td>
+								<td><input type="number" name="" id="tenure" min="0" placeholder="Loan Duration"/> years</td>
+							</tr>
+							<tr><td colspan="2" style="text-align: center; padding: 20px;"><input type="button" value="Calculate EMI" onclick="calculate_emi()" style="color:white; background-color:#00cc00; border-radius:2px; cursor:pointer;"></td></tr>
+						</table>
+					</form>
+				</div>
+				
+				<div id="res" style="display: none;"> 
+					<h3>Loan EMI is Rs. <span id="emi"></span></h3>
+					<table>
+						<tr>
+							<td><label>Total Interest Paid:</label></td>
+							<td><label id="tot_int"></label></td>
+						</tr>
+						<tr>
+							<td><label>Total Amount Paid:</label></td>
+							<td><label id="tot_amt"></label></td>
+						</tr>
+						<tr>
+							<td><label>Effective Rate p.a.:</label></td>
+							<td><label><span  id="eff_rate_pa"></span> %</label></td>
+						</tr>
+						<tr>
+							<td><label>Effective Rate p.m.:</label></td>
+							<td><label><span id="eff_rate_pm"></span> %</label></td>
+						</tr>
+					</table></br>
+					
+					<input type="button" onclick="get_Amortization()" name="" value="Create Amortization Chart" style="color:white; background-color:#00cc00; border-radius:2px; max-width:50%; cursor:pointer;"> </button>	
+				</div>
+			</div>
+			<div id="amortize" style="display:inline-block" width="70%" border="1px solid black"></div>
+		</div>
+	</body> 
+</html>
+			
